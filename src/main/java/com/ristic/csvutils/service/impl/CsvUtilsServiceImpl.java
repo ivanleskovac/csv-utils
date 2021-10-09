@@ -103,4 +103,9 @@ public class CsvUtilsServiceImpl implements CsvUtilsService {
 		return repository.findAll();
 	}
 
+	@Override
+	public CsvRecord getRecord(String code) {
+		return repository.findByCode(code);
+	}
+
 }

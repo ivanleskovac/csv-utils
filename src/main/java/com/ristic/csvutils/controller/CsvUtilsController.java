@@ -35,4 +35,10 @@ public class CsvUtilsController {
 		List<CsvRecord> records = csvUtilsService.getRecords();
 		return new ResponseEntity<>(records, HttpStatus.OK);
 	}
+
+	@GetMapping("/records/get")
+	public ResponseEntity<Object> getCsvRecord(@RequestParam(value = "code") String code) {
+		CsvRecord record = csvUtilsService.getRecord(code);
+		return new ResponseEntity<>(record, HttpStatus.OK);
+	}
 }

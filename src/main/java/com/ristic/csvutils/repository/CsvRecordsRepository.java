@@ -6,4 +6,6 @@ import com.ristic.csvutils.domain.CsvRecord;
 
 public interface CsvRecordsRepository extends JpaRepository<CsvRecord, Long> {
 
+	CsvRecord findByCode(String code);
+
 }

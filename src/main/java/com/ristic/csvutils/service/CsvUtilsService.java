@@ -18,4 +18,6 @@ public interface CsvUtilsService {
 
 	List<CsvRecord> getRecords();
 
+	CsvRecord getRecord(String code);
+
 }
