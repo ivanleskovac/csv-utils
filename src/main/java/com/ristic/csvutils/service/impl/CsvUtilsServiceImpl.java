@@ -98,4 +98,9 @@ public class CsvUtilsServiceImpl implements CsvUtilsService {
 		return values;
 	}
 
+	@Override
+	public List<CsvRecord> getRecords() {
+		return repository.findAll();
+	}
+
 }
