@@ -20,4 +20,6 @@ public interface CsvUtilsService {
 
 	CsvRecord getRecord(String code);
 
+	void deleteAll();
+
 }

@@ -108,4 +108,9 @@ public class CsvUtilsServiceImpl implements CsvUtilsService {
 		return repository.findByCode(code);
 	}
 
+	@Override
+	public void deleteAll() {
+		repository.deleteAll();		
+	}
+
 }
