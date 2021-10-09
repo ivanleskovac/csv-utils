@@ -1,0 +1,42 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd 
+   http://www.liquibase.org/xml/ns/dbchangelog 
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet id="createTable-csvRecords" author="ivan">
+		<createTable tableName="csv_records" remarks="CSV records.">			
+            <column name="id" autoIncrement="true" type="bigint" startWith="1" remarks="Unique internal (technical) identifier.">
+              <constraints primaryKey="true"/>
+            </column>
+            <column name="source" type="varchar(20)" remarks="source">
+              <constraints nullable="true"/>
+            </column>
+            <column name="code_list_code" type="varchar(20)" remarks="codeListCode">
+              <constraints nullable="true"/>
+            </column>
+            <column name="code" type="varchar(255)" remarks="code">
+              <constraints nullable="true"/>
+            </column>
+            <column name="display_value" type="varchar(255)" remarks="displayValue">
+              <constraints nullable="true"/>
+            </column>
+            <column name="long_description" type="clob" remarks="longDescription">
+              <constraints nullable="true"/>
+            </column>
+            <column name="from_date" type="date" remarks="fromDate">
+              <constraints nullable="true"/>
+            </column> 
+            <column name="to_date" type="date" remarks="toDate">
+              <constraints nullable="true"/>
+            </column> 
+            <column name="sorting_priority" type="int" remarks="sortingPriority">
+              <constraints nullable="true"/>
+            </column>       
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
